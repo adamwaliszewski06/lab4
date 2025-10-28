@@ -55,7 +55,7 @@ void wypisz_dzielniki(int n) {
 	}
 } */
 
-/* zad 3 - kalkulator z funkcjami */
+/* zad 3 - kalkulator z funkcjami 
 
 float a, b;
 char operation;
@@ -120,3 +120,31 @@ float multiplication(float a, float b) {
 float division(float a, float b) {
 		return a / b;
 	}
+*/
+
+/* zad 4 - a do potegi b */
+int a, b;
+int power(int a, int b);
+
+int main() {
+	cout << "Enter a whole, positive base (a): ";
+	cin >> a;
+	cout << "Enter a whole, positive exponent (b): ";
+	cin >> b;
+	if (a < 0 || b < 0) {
+		cout << "Both numbers must be positive." << endl;
+	}
+	
+	else {
+		cout << a << " to the power of " << b << " is " << power(a, b) << endl;
+	}
+	return 0;
+}
+
+int power(int a, int b) {
+	int result = 1; // a to the power of 0 is 1
+	for (int i=0; i<b; i++) {
+		result = result * a;
+	}
+	return result;
+}
