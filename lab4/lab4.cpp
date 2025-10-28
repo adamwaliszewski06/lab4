@@ -42,11 +42,15 @@ int main() {
 void wypisz_dzielniki(int n) {
 	cout << "Podaj liczbe dodatnia calkowita: ";
 	cin >> n;
-	cout << "Dzielniki liczby " << n << " to: ";
-	for (int i = 1; i <= n; i++) {
-		if (n % i == 0) {
-			cout << i << " ";
+	if (n > 0) {
+		cout << "Dzielniki liczby " << n << " to: ";
+		for (int i = 1; i <= n; i++) {
+			if (n % i == 0) {
+				cout << i << " ";
+			}
 		}
 	}
-
+	else {
+		cout << "Podana liczba nie jest dodatnia." << endl;
+	}
 }
