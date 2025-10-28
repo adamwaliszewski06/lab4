@@ -122,7 +122,7 @@ float division(float a, float b) {
 	}
 */
 
-/* zad 4 - a do potegi b */
+/* zad 4 - a do potegi b
 int a, b;
 int power(int a, int b);
 
@@ -148,3 +148,36 @@ int power(int a, int b) {
 	}
 	return result;
 }
+ */
+
+ /* zad 5 - n! 
+int n;
+int factorial(int n);
+
+int main() {
+	cout << "Enter a natural number (0,1,2,...): ";
+	cin >> n;
+	if (n < 0) {
+		cout << "Number must be natural." << endl;
+	}
+	else {
+		cout << n << "! = " << factorial(n) << endl;
+	}
+}
+
+int factorial(int n) {
+	int result = 1;
+	if (n == 0 || n == 1) {
+		return 1;
+	}
+	else {
+		for (int i = 1; i <= n; i++) {
+			result = result * i;
+		}
+		return result;
+	}
+
+}
+*/
+
+/* zad 6 */
