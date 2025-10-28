@@ -180,4 +180,28 @@ int factorial(int n) {
 }
 */
 
-/* zad 6 */
+/* zad 6 - 2 do n-tej*/
+int n;
+int power_of_n(int n);
+
+int main() {
+	cout << "Enter a natural exponent (0,1,2,...): ";
+	cin >> n;
+	cout << "2 to the power of " << n << " is " << power_of_n(n) << endl;
+	return 0;
+}
+
+int power_of_n(int n) {
+	if (n < 0) {
+		cout << "Number must be natural." << endl;
+
+		// co tutaj zwrocic? moze wyjac if'a poza funkcje
+	}
+	else {
+		int result = 1;
+		for (int i = 0; i < n; i++) {
+			result = result * 2;
+		}
+		return result;
+	}
+} 
