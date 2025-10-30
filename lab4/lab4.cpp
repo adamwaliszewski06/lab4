@@ -212,7 +212,6 @@ int power_of_n(int n) {
 #include <cmath>
 
 int n;
-int power_of_n(int n);
 
 int main() {
 	cout << "Enter a natural exponent (0,1,2,...): ";
@@ -233,7 +232,7 @@ int main() {
 numerek oraz ile stanowi to procent wszystkich wylosowanych liczb. Wartość argumentu funkcji powinna być
 podana przez użytkownika i powinna należeć do przedziału [1, 10]. 
 
-#include <cstdlib>
+#include <cstdlib> // biblioteki potrzebne do uzycia rand i srand 
 #include <ctime> 
 
 int main() { 
@@ -258,4 +257,32 @@ srand(static_cast<unsigned>(time(nullptr)));
 }
 */
 
-/* zad 8 - */
+/* zad 8 - Napisz program, który dla 100 kolejnych liczb naturalnych wykona następujące działania: jeśli liczba jest
+parzysta to program obliczy n/2, jeśli liczba jest nieparzysta to obliczy (n − 1)/2. Niech oba te działania będą
+zaimplementowane w oddzielnych funkcjach zwracających odpowiednie rozwiązania. 
+
+int odd(int n);
+int even(int n);
+int n = 1;
+
+int main() {
+	for (int i = 1; i <= 100; ++i) {
+		if (i % 2 == 0) {
+			cout << n << "/2     = " << even(i) << endl;
+		}
+		else {
+			cout << "(" << n << "-1)/2 = " << odd(i) << endl;
+		}
+		n++;
+	}
+	return 0;
+}
+
+int even(int n) {
+	return n / 2;
+}
+
+int odd(int n) {
+	return (n - 1) / 2;
+}
+*/
