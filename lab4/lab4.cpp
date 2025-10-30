@@ -1,6 +1,7 @@
 ﻿
 
 #include <iostream>
+
 using namespace std;
 
 /* zad 1 
@@ -180,28 +181,81 @@ int factorial(int n) {
 }
 */
 
-/* zad 6 - 2 do n-tej*/
+/* zad 6 - 2 do n-tej
 int n;
 int power_of_n(int n);
 
 int main() {
 	cout << "Enter a natural exponent (0,1,2,...): ";
 	cin >> n;
-	cout << "2 to the power of " << n << " is " << power_of_n(n) << endl;
+	if (n < 0) {
+		cout << "Number must be natural." << endl;
+	}
+	else {
+		cout << "2 to the power of " << n << " is " << power_of_n(n) << endl;
+	} 
 	return 0;
 }
 
 int power_of_n(int n) {
-	if (n < 0) {
-		cout << "Number must be natural." << endl;
 
-		// co tutaj zwrocic? moze wyjac if'a poza funkcje
-	}
-	else {
 		int result = 1;
 		for (int i = 0; i < n; i++) {
 			result = result * 2;
 		}
 		return result;
 	}
-} 
+*/
+
+/* zad 6 z funkcja pow 
+
+#include <cmath>
+
+int n;
+int power_of_n(int n);
+
+int main() {
+	cout << "Enter a natural exponent (0,1,2,...): ";
+	cin >> n;
+	if (n < 0) {
+		cout << "Number must be natural." << endl;
+	}
+	else {
+		cout << "2 to the power of " << n << " is " << pow(2,n) << endl;
+	}
+	return 0;
+}
+*/
+
+
+/* zad 7 - Napisz funkcję, która jako argument przyjmuje liczbę całkowitą (szczęśliwy numerek), a następnie losuje
+10 liczb całkowitych z przedziału [1, 10] i zlicza ile razy podczas tego losowania pojawił się podany szczęśliwy
+numerek oraz ile stanowi to procent wszystkich wylosowanych liczb. Wartość argumentu funkcji powinna być
+podana przez użytkownika i powinna należeć do przedziału [1, 10]. 
+
+#include <cstdlib>
+#include <ctime> 
+
+int main() { 
+int lucky_number, percentage;
+int count = 0;
+cout << "Enter a whole number [1-10]: ";
+cin >> lucky_number;
+
+
+srand(static_cast<unsigned>(time(nullptr)));
+
+
+	for (int i = 0; i < 10; ++i) {  // draws a random number in [0,10], 10 times, and writes them out 
+		int x = rand() % (10 + 1);
+		cout << x << " ";
+		if (x == lucky_number)
+			count++;
+	}
+	percentage = (count * 100) / 10;
+	cout << endl << "Your number was drawn " << count << " time(s), " << "which is " << percentage << "% of the numbers drawn." << endl;
+	return 0;
+}
+*/
+
+/* zad 8 - */
